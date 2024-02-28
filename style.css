@@ -1,0 +1,28 @@
+body{
+    background-color: aqua;
+}
+h1{
+    text-align: center;
+    color: brown;
+    margin: 5%;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    background-color: burlywood;
+    width: 450px;
+    height: 450px;
+    display: block;
+    margin: 0 auto;
+}
+button{
+    width:  125px;
+    height: 125px;
+    margin: 10px 10px;
+    display: inline;
+    align-items: center;
+    background-color: white;
+    font-size: 50px;
+    border: 0;
+}
+
