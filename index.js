@@ -36,8 +36,13 @@ for (let i = 0; i < len; i++) {
             but[i].innerHTML = 'O';
             o.push(botton);
         }
+
+        
         x.sort();
         o.sort();
+
+
+        let chk = 0;
         winningSet.forEach(function (val) {
             let a = [],b= [];
             for(let i = 0; i<val.length; i++){
@@ -51,6 +56,7 @@ for (let i = 0; i < len; i++) {
             if(a.toString() == val){
                 console.log('yeah');
                 document.getElementById('head').innerText = 'O WINS';
+                chk = 1;
                 return;
             }
             for(let i = 0; i<val.length; i++){
@@ -62,10 +68,11 @@ for (let i = 0; i < len; i++) {
             }
             if(b.toString() == val){
                 document.getElementById('head').innerText = 'X WINS';
+                chk = 1;
                 return;
             }
         });
-        if(cnt>=9){
+        if(cnt>=9 && chk == 0){
             document.getElementById('head').innerText = 'DRAW';
             return;
         }
