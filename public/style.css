@@ -1,20 +1,70 @@
 body{
     background-color: aqua;
     position: relative;
+    display: grid;
+    grid-template-areas: ". . t t . ."
+                        ". . s s . .";
 }
 h1{
+    grid-area: t;
     text-align: center;
 }
 .container{
     background-color: rgb(232, 208, 176);
-    position: relative;
+    position: absolute;
+    grid-area: s;
     width: 480px;
     height: 480px;
     margin: 0 auto;
+    border-radius: 25px;
+    overflow: hidden;
 }
-input{
+.container2{
+    background-color: rgb(232, 208, 176);
+    position: absolute;
+    grid-area: s;
+    width: 480px;
+    height: 480px;
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 10%;
+}
+.ox{
     width: 157px;
     height: 159px;
     font-weight: bold;
     font-size: 4em;
+    border-radius: 10px;
+    border: 1px solid rgb(232, 208, 176);
+}
+.name{
+    width: 90%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 5%;
+    font-size: 1rem;
+}
+.nameHead{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: sans-serif;
+    margin: 10%;
+}
+.btn{
+    width: 90%;
+    text-align: center;
+    background-color: rgb(126, 126, 227);
+    border: 1px solid rgb(126, 126, 227);
+    border-radius: 10px;
+    height: 8%;
+    margin: 5% 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.btn:hover{
+    opacity: 80%;
 }

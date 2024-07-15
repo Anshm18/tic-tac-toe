@@ -2,6 +2,14 @@ const socket = io("ws://localhost:3000");
 const but = document.getElementsByTagName("input");
 const len = but.length;
 
+const frm = document.querySelector(".container2");
+const bt = document.querySelector('.btn');
+
+bt.addEventListener('click',(e)=>{
+    e.preventDefault();
+    frm.style.setProperty('visibility','hidden');
+})
+
 let cnt = 1;
 let users = [];
 let x = [];
@@ -58,13 +66,6 @@ socket.on('XeventOccured',(i)=>{
     checkWinner();
 })
 
-socket.on('activity',data=>{
-    document.querySelector('#head').innerText = `${data} is typing...`
-})
-
-socket.on('DisableActivity',()=>{
-    document.querySelector('#head').innerText = 'Tic-Tac-Toe Game';
-})
 
 function checkWinner(){
     let check = 0;

@@ -19,7 +19,6 @@ io.on('connection',socket =>{
 
     io.emit('users',socket.id)
 
-    socket.broadcast.emit('activity','O')
     socket.on('event',(i)=>{
         if(socket.id === users[0]){
             io.emit('OeventOccured',i);
